@@ -7,7 +7,7 @@ import io
 import json
 
 # Initialize Groq client
-GROQ_API_KEY = "os.getenv("GROQ_API_KEY")"
+GROQ_API_KEY = os.getenv("GROQ_API_KEY")
 
 def extract_text_from_pdf(file):
     """Extract text from PDF file"""
