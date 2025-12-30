@@ -3,6 +3,8 @@ import os
 from groq import Groq
 import PyPDF2
 import io
+from dotenv import load_dotenv
+load_dotenv()
 # Load Groq API key securely from environment variables
 GROQ_API_KEY = os.getenv("GROQ_API_KEY")
 
