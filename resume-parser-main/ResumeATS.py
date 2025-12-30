@@ -3,9 +3,10 @@ import os
 from groq import Groq
 import PyPDF2
 import io
+# Load Groq API key securely from environment variables
+GROQ_API_KEY = os.getenv("GROQ_API_KEY")
 
-# Initialize Groq client - Use environment variable in production!
-client = Groq(api_key="os.getenv("GROQ_API_KEY")")
+client = Groq(api_key=GROQ_API_KEY)
 
 def extract_text_from_pdf(pdf_file):
     pdf_reader = PyPDF2.PdfReader(pdf_file)
